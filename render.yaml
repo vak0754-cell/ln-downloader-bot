@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: ln-downloader-bot
+    runtime: docker
+    plan: free
+    region: frankfurt
+    autoDeploy: false
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ALLOWED_USER_IDS
+        sync: false
+      - key: NOTIFY_CHAT_ID
+        sync: false
+      - key: API_KEY
+        sync: false
+      - key: WEBHOOK_SECRET
+        sync: false
+      - key: DATA_DIR
+        value: /tmp/data
